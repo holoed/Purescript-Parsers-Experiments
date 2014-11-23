@@ -43,7 +43,6 @@ instance bindParsers :: Bind Parser where
 
 instance monadParsers :: Monad Parser 
 
-
 sat :: (Char -> Boolean) -> Parser Char
 sat p = do x <- item
            if (p x) then return x else fail
